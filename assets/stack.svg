@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="312" viewBox="0 0 660 312" role="img" aria-label="ROBORACER 실차 주행 스택">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1230"/></linearGradient>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f97316"/></marker>
+<style>.h{font:700 19px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.s{font:500 12.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#94a3b8}.b{font:700 13.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.d{font:500 11.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#cbd5e1}.f{font:600 12px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f97316}.flow{stroke:#f97316;stroke-width:2;stroke-dasharray:5 5;animation:m 1.2s linear infinite}@keyframes m{to{stroke-dashoffset:-20}}</style></defs>
+<rect width="660" height="312" rx="14" fill="url(#bg)"/>
+<text x="28" y="42" class="h">ROBORACER 실차 주행 스택</text><text x="28" y="64" class="s">Jetson · ROS2 Humble · 1:10 차량 (팀 프로젝트)</text>
+<rect x="28.0" y="100" width="137.5" height="150" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="96.8" y="128" text-anchor="middle" class="b">센서</text>
+<text x="96.8" y="156" text-anchor="middle" class="d">LPX-T1 라이다 40 Hz</text>
+<text x="96.8" y="175" text-anchor="middle" class="d">EBIMU 9DOF</text>
+<text x="96.8" y="194" text-anchor="middle" class="d">VESC 바퀴속도</text>
+<text x="96.8" y="213" text-anchor="middle" class="d">RC 수신기</text>
+<line class="flow" x1="167.5" y1="175.0" x2="180.5" y2="175.0" marker-end="url(#ar)"/>
+<rect x="183.5" y="100" width="137.5" height="150" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="252.2" y="128" text-anchor="middle" class="b">위치추정</text>
+<text x="252.2" y="156" text-anchor="middle" class="d">Cartographer 2D</text>
+<text x="252.2" y="175" text-anchor="middle" class="d">14차례 튜닝 기록</text>
+<text x="252.2" y="194" text-anchor="middle" class="d">IMU 축 결함 추적</text>
+<line class="flow" x1="323.0" y1="175.0" x2="336.0" y2="175.0" marker-end="url(#ar)"/>
+<rect x="339.0" y="100" width="137.5" height="150" rx="10" fill="#2a1a12" stroke="#f97316" stroke-width="1.4"/>
+<text x="407.8" y="128" text-anchor="middle" class="b">계획·추종</text>
+<text x="407.8" y="156" text-anchor="middle" class="d">레이싱 라인 생성</text>
+<text x="407.8" y="175" text-anchor="middle" class="d">Stanley 경로 추종</text>
+<text x="407.8" y="194" text-anchor="middle" class="d">FGM 회피 · TRAILING</text>
+<text x="407.8" y="213" text-anchor="middle" class="d">REJOIN 복귀</text>
+<line class="flow" x1="478.5" y1="175.0" x2="491.5" y2="175.0" marker-end="url(#ar)"/>
+<rect x="494.5" y="100" width="137.5" height="150" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="563.2" y="128" text-anchor="middle" class="b">안전·구동</text>
+<text x="563.2" y="156" text-anchor="middle" class="d">AEB 비상 제동</text>
+<text x="563.2" y="175" text-anchor="middle" class="d">속도 PI → VESC</text>
+<text x="563.2" y="194" text-anchor="middle" class="d">ESP32 조향 서보</text>
+<text x="563.2" y="213" text-anchor="middle" class="d">RC 수동/자율 전환</text>
+<text x="28" y="286" class="f">조향 풀스케일 실측으로 "명령의 43%만 나가던" 조향 수정</text></svg>
