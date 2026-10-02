@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://tkddn647-ship-it.github.io"><img src="https://img.shields.io/badge/Portfolio-tkddn647--ship--it.github.io-161B33?style=for-the-badge&labelColor=9A6F33" alt="포트폴리오 홈페이지"/></a>
+</p>
+
+<p align="center">
   <img src="https://skillicons.dev/icons?i=python,cpp,c,pytorch,ros,linux,raspberrypi,flask,fastapi&theme=dark" alt="tech stack"/>
 </p>
 
