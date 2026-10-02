@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="권상우 · Sangwoo Kwon — Robotics · Autonomous Racing · Embedded">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#121a33"/>
+      <stop offset="1" stop-color="#1b1230"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#facc15"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
+    </radialGradient>
+    <style>
+      .t1 { font: 700 46px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif; fill: #f8fafc; }
+      .t2 { font: 500 20px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif; fill: #cbd5e1; }
+      .t3 { font: 600 14px 'JetBrains Mono','SFMono-Regular',Consolas,monospace; fill: #f97316; letter-spacing: 3px; }
+      .tag { font: 600 13px 'Segoe UI','Noto Sans KR',sans-serif; fill: #e2e8f0; }
+      .track { fill: none; stroke: url(#line); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 8 10; animation: run 6s linear infinite; }
+      .trackbase { fill: none; stroke: #334155; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
+      .beam { stroke: #38bdf8; stroke-width: 1; opacity: 0.55; animation: pulse 2.4s ease-in-out infinite; }
+      @keyframes run { to { stroke-dashoffset: -180; } }
+      @keyframes pulse { 0%,100% { opacity: 0.15; } 50% { opacity: 0.7; } }
+      .car { animation: drive 6s linear infinite; offset-path: path('M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z'); }
+      @keyframes drive { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="300" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="300" rx="18" fill="url(#glow)"/>
+
+  <!-- grid -->
+  <g stroke="#1e293b" stroke-width="1">
+    <path d="M0 60H1200M0 120H1200M0 180H1200M0 240H1200"/>
+    <path d="M100 0V300M200 0V300M300 0V300M400 0V300M500 0V300M600 0V300M700 0V300M800 0V300M900 0V300M1000 0V300M1100 0V300"/>
+  </g>
+
+  <!-- track -->
+  <path class="trackbase" d="M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z"/>
+  <path class="track" d="M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z"/>
+
+  <!-- car with lidar beams -->
+  <g class="car">
+    <g class="beam">
+      <line x1="0" y1="0" x2="60" y2="-38"/><line x1="0" y1="0" x2="70" y2="-12"/>
+      <line x1="0" y1="0" x2="70" y2="12"/><line x1="0" y1="0" x2="60" y2="38"/>
+      <line x1="0" y1="0" x2="34" y2="-58"/><line x1="0" y1="0" x2="34" y2="58"/>
+    </g>
+    <rect x="-11" y="-6" width="22" height="12" rx="3" fill="#f97316"/>
+    <circle cx="4" cy="0" r="2.6" fill="#0b1020"/>
+  </g>
+
+  <!-- text -->
+  <text x="64" y="92" class="t3">ROBOTICS · AUTONOMOUS RACING · EMBEDDED</text>
+  <text x="64" y="152" class="t1">권상우 <tspan fill="#94a3b8" font-weight="500">· Sangwoo Kwon</tspan></text>
+  <text x="64" y="192" class="t2">시뮬레이션에서 끝내지 않고, 실제 하드웨어에 올립니다.</text>
+
+  <g transform="translate(64,224)">
+    <rect x="0" width="186" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="93" y="20" text-anchor="middle" class="tag">Reinforcement Learning</text>
+    <rect x="196" width="124" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="258" y="20" text-anchor="middle" class="tag">ROS2 · Jetson</text>
+    <rect x="330" width="118" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="389" y="20" text-anchor="middle" class="tag">STM32 · CAN</text>
+    <rect x="458" width="140" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="528" y="20" text-anchor="middle" class="tag">Mechanical Eng.</text>
+  </g>
+</svg>
