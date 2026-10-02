@@ -115,7 +115,7 @@
 </td>
 <td width="50%" valign="top">
 
-### 🚀 시뮬레이션–실측 기반 로켓 설계
+### 🚀 [시뮬레이션–실측 기반 로켓 설계](https://github.com/tkddn647-ship-it/AJR-2_rocket)
 <sub>로켓 동아리 · 🏆 2025 전국대학교로켓 학술대회·발사대회 수상</sub>
 
 <img src="./assets/rocket.jpg" alt="로켓 시뮬레이션과 가상 비행"/>
@@ -125,7 +125,7 @@
 - OpenRocket으로 형상 비교, 핀은 SolidWorks 설계 → 3D 프린팅
 - 대회용 연료·노즐 추력을 **로드셀로 직접 측정**해 추력곡선 반영
 - Genesis AI 가상 비행 → 실측 Roll·Pitch·Yaw와 비교 분석
-- 설계–시뮬레이션–실측–재설계 사이클을 보고서로 문서화
+- OpenRocket 결과를 운동방정식 직접 적분으로 재검증 (최고고도 차이 4~5%)
 
 `OpenRocket` `SolidWorks` `Genesis AI` `Load Cell`
 
