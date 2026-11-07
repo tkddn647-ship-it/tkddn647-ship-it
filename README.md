@@ -39,6 +39,26 @@
 </td>
 <td width="50%" valign="top">
 
+### 🤖 [AI Office · AI 에이전트 개발 자동화](https://github.com/tkddn647-ship-it/ai-office)
+<sub>LLM Automation · GitHub Actions · 개인 프로젝트</sub>
+
+<img src="./assets/ai_office.svg" alt="AI Office 흐름: 이슈 → 계획 → 구현 → 검토 → PR"/>
+
+이슈에 라벨 하나만 달면 **계획 → 구현 → 검토 → PR**까지 AI가 역할을 나눠 처리하는 개발 자동화. 기획·운영은 직접, 코드는 Claude Code·Cursor로 작성.
+
+- 계획·검토 AI는 **읽기 전용**, 구현 AI만 코드 수정
+- **자동 병합 없음**: 사람이 PR을 보고 병합
+- 테스트를 직접 실행해 결과를 PR에 첨부, 리뷰에서 문제가 나오면 자동 수정 라운드
+- 실제 레포 2곳에서 **PR 24개 생성 · 24개 병합** (2026.10.27 기준)
+- 출처 검사 규칙: 없는 쪽을 출처로 쓰면 CI 실패 → AI가 원자료 밖 내용으로 만든 결과 **1건 적발**
+
+`Python` `GitHub Actions` `Claude Code` `Cursor` `YAML`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 ### 🏁 [ROBORACER 실차 주행 스택](https://github.com/tkddn647-ship-it/f1tenth_ajou)
 <sub>Robotics · ROS2 · 팀 프로젝트</sub>
 
@@ -56,8 +76,6 @@
 <br/>관련: [jetson_code](https://github.com/tkddn647-ship-it/jetson_code)
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### ⚡ [AFA2026 차량 계측 시스템](https://github.com/tkddn647-ship-it/afa2026)
@@ -75,6 +93,8 @@
 `C` `STM32` `CAN` `Raspberry Pi` `FastAPI`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 🚑 [대구시 응급 골든타임 최적화](https://github.com/tkddn647-ship-it/Data_center)
@@ -92,8 +112,6 @@
 `Python` `NetworkX` `PPO` `Flask` `Leaflet`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### 🐍 수중형 장어로봇 다관절 제어
@@ -111,6 +129,8 @@
 `SolidWorks` `KiCad` `MCU Firmware` `PID` `I2C`
 
 </td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 🚀 [시뮬레이션–실측 기반 로켓 설계](https://github.com/tkddn647-ship-it/AJR-2_rocket)
@@ -128,8 +148,6 @@
 `OpenRocket` `SolidWorks` `Genesis AI` `Load Cell`
 
 </td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 ### 🛞 가변 형상 바퀴 양방향 FSI 해석
@@ -146,7 +164,9 @@
 `Ansys CFX` `Transient Structural` `System Coupling`
 
 </td>
-<td width="50%" valign="top">
+</tr>
+<tr>
+<td colspan="2" valign="top">
 
 ### 💼 Experience & Awards
 
@@ -175,6 +195,7 @@
 | 🧠 강화학습·AI | PyTorch, Stable-Baselines3 (SAC · PPO), Gymnasium, TorchScript / ONNX |
 | 🔌 임베디드·하드웨어 | STM32 HAL · DMA, CAN, UART · SPI · I2C · ADC, ESP32, VESC, Raspberry Pi 5, KiCad |
 | 🛠️ 기계 설계·해석 | SolidWorks, 3D 프린팅, Ansys CFX · Mechanical · System Coupling, OpenRocket, Genesis AI, MATLAB |
+| 🧩 LLM 업무 자동화 | Claude Code, Cursor CLI, GitHub Actions, Gemini API, 출처 검사·테스트 자동 실행 |
 | 🌐 데이터·서버 | Flask, FastAPI, UDP/TCP, AWS, NetworkX, GIS(ITS 표준노드링크, Leaflet) |
 
 <br/>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="312" viewBox="0 0 660 312" role="img" aria-label="AI Office 개발 자동화 흐름">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1230"/></linearGradient>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f97316"/></marker>
+<style>.h{font:700 19px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.s{font:500 12.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#94a3b8}.b{font:700 15px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.d{font:500 11px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#cbd5e1}.f{font:600 13px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f97316}.flow{stroke:#f97316;stroke-width:2;stroke-dasharray:5 5;animation:m 1.2s linear infinite}@keyframes m{to{stroke-dashoffset:-20}}</style></defs>
+<rect width="660" height="312" rx="14" fill="url(#bg)"/>
+<text x="28" y="42" class="h">AI Office · AI 에이전트 개발 자동화</text><text x="28" y="64" class="s">GitHub Actions · 역할을 나눈 AI 3단계 · 개인 프로젝트</text>
+<rect x="28" y="100" width="108" height="130" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="82.0" y="134" text-anchor="middle" class="b">이슈</text>
+<text x="82.0" y="166" text-anchor="middle" class="d">라벨 하나로 시작</text>
+<line x1="138" y1="165.0" x2="153" y2="165.0" class="flow" marker-end="url(#ar)"/>
+<rect x="155" y="100" width="108" height="130" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="209.0" y="134" text-anchor="middle" class="b">계획</text>
+<text x="209.0" y="166" text-anchor="middle" class="d">Claude, 읽기 전용</text>
+<text x="209.0" y="188" text-anchor="middle" class="d">최대 3개 작업</text>
+<line x1="265" y1="165.0" x2="280" y2="165.0" class="flow" marker-end="url(#ar)"/>
+<rect x="282" y="100" width="108" height="130" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="336.0" y="134" text-anchor="middle" class="b">구현</text>
+<text x="336.0" y="166" text-anchor="middle" class="d">Cursor</text>
+<text x="336.0" y="188" text-anchor="middle" class="d">작업마다 커밋</text>
+<line x1="392" y1="165.0" x2="407" y2="165.0" class="flow" marker-end="url(#ar)"/>
+<rect x="409" y="100" width="108" height="130" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="463.0" y="134" text-anchor="middle" class="b">검토</text>
+<text x="463.0" y="166" text-anchor="middle" class="d">Claude, 읽기 전용</text>
+<text x="463.0" y="188" text-anchor="middle" class="d">테스트 결과 첨부</text>
+<line x1="519" y1="165.0" x2="534" y2="165.0" class="flow" marker-end="url(#ar)"/>
+<rect x="536" y="100" width="108" height="130" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="590.0" y="134" text-anchor="middle" class="b">PR</text>
+<text x="590.0" y="166" text-anchor="middle" class="d">자동 병합 없음</text>
+<text x="590.0" y="188" text-anchor="middle" class="d">사람이 보고 병합</text>
+<text x="28" y="272" class="f">PR 24개 생성 · 24개 병합</text><text x="200" y="272" class="s">studyroom 15 · 2027_F1tenth_test 9 (2026.10.27 기준)</text>
+</svg>
