@@ -40,6 +40,25 @@
 </td>
 </tr>
 <tr>
+<td colspan="2" valign="top">
+
+### 🧴 [품질 이슈·회수·재공급 운영 시스템 · AX인재전쟁](https://github.com/tkddn647-ship-it/w03-quality-recall)
+<sub>AX인재전쟁 온라인 삼일PwC 출제 회차 · 개인 참가 · 업무 규칙·판단 기준 설계와 검증 (코드는 Claude Code로 작성)</sub>
+
+<img src="./assets/w03.svg" alt="클레임 접수 → 판정 → 상신 → 의결 → 실행·재공급, 규칙 엔진·AI·사람의 역할 구분"/>
+
+화장품 클레임과 언론 보도가 겹친 상황에서 **클레임 접수 → 회수대상 판정 → 품질위원회 의결 → 재공급 계획**을 하나로 잇는 웹 업무 시스템.
+
+- 배치별 불량률을 생산량·출하량 **두 분모**로 다시 계산, 하나라도 10% 이상이면 회수대상 (규칙 10개 · 가정 32개를 설계 문서로 명시)
+- **AI는 문장만**: 입력은 규칙 엔진 계산값뿐, 숫자가 다르거나 의결 전 결정처럼 읽히면 다시 생성, 실패하면 사람이 쓰는 경로
+- 원료 **로트 역추적**으로 같은 로트 재고 **13,696EA**를 출하 전 추가검사로 묶고 재공급 계산에서 제외
+- 대회 데이터: 회수대상 2개 배치, 재공급 필요량이 라인 여유의 **5.12배** → '대안 필요', 자동 테스트 **195개**
+
+`Python` `FastAPI` `SQLite` `Pydantic` `Gemini API` `pytest` · [설계 문서](https://github.com/tkddn647-ship-it/w03-quality-recall/blob/main/DESIGN.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 🏎️ [지도 없이 달리는 레이싱카 강화학습](https://github.com/tkddn647-ship-it/2027_F1tenth_test)

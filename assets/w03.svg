@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="312" viewBox="0 0 660 312" role="img" aria-label="W03 흐름: 클레임 접수, 회수대상 판정, 상신, 품질위원회 의결, 실행과 재공급. 계산과 판정은 규칙 엔진, 문장은 AI, 의결은 사람">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1230"/></linearGradient>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f97316"/></marker>
+<style>.h{font:700 19px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.s{font:500 12.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#94a3b8}.b{font:700 14px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.d{font:500 10.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#cbd5e1}.k{font:600 11px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif}.flow{stroke:#f97316;stroke-width:2;stroke-dasharray:5 5;animation:m 1.2s linear infinite}@keyframes m{to{stroke-dashoffset:-20}}@media (prefers-reduced-motion:reduce){.flow{animation:none}}</style></defs>
+<rect width="660" height="312" rx="14" fill="url(#bg)"/>
+<text x="28" y="42" class="h">W03 · 품질 이슈 · 회수 · 재공급 운영</text><text x="28" y="64" class="s">AX인재전쟁 삼일PwC 출제 회차 · FastAPI · SQLite · 개인 참가</text>
+
+<rect x="28" y="96" width="106" height="120" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="81" y="126" text-anchor="middle" class="b">클레임 접수</text>
+<text x="81" y="152" text-anchor="middle" class="d">클레임·언론 보도</text>
+<text x="81" y="170" text-anchor="middle" class="d">들어오면 즉시</text>
+<text x="81" y="188" text-anchor="middle" class="d">다시 판정</text>
+<line x1="136" y1="156" x2="148" y2="156" class="flow" marker-end="url(#ar)"/>
+
+<rect x="150" y="96" width="106" height="120" rx="10" fill="#141c33" stroke="#22c55e" stroke-width="1.4"/>
+<text x="203" y="126" text-anchor="middle" class="b">판정</text>
+<text x="203" y="152" text-anchor="middle" class="d">불량률 두 분모</text>
+<text x="203" y="170" text-anchor="middle" class="d">10% 이상 회수대상</text>
+<text x="203" y="188" text-anchor="middle" class="d">규칙 R1~R10</text>
+<line x1="258" y1="156" x2="270" y2="156" class="flow" marker-end="url(#ar)"/>
+
+<rect x="272" y="96" width="106" height="120" rx="10" fill="#141c33" stroke="#38bdf8" stroke-width="1.4"/>
+<text x="325" y="126" text-anchor="middle" class="b">상신</text>
+<text x="325" y="152" text-anchor="middle" class="d">근거 수치·영향 고객</text>
+<text x="325" y="170" text-anchor="middle" class="d">의결 전 공급 영향</text>
+<text x="325" y="188" text-anchor="middle" class="d">AI 요약 문장</text>
+<line x1="380" y1="156" x2="392" y2="156" class="flow" marker-end="url(#ar)"/>
+
+<rect x="394" y="96" width="106" height="120" rx="10" fill="#141c33" stroke="#f97316" stroke-width="1.4"/>
+<text x="447" y="126" text-anchor="middle" class="b">의결</text>
+<text x="447" y="152" text-anchor="middle" class="d">품질위원회</text>
+<text x="447" y="170" text-anchor="middle" class="d">배치별 승인·사유</text>
+<text x="447" y="188" text-anchor="middle" class="d">1영업일 넘기면 지연</text>
+<line x1="502" y1="156" x2="514" y2="156" class="flow" marker-end="url(#ar)"/>
+
+<rect x="516" y="96" width="116" height="120" rx="10" fill="#141c33" stroke="#22c55e" stroke-width="1.4"/>
+<text x="574" y="126" text-anchor="middle" class="b">실행·재공급</text>
+<text x="574" y="152" text-anchor="middle" class="d">출하보류·작업 생성</text>
+<text x="574" y="170" text-anchor="middle" class="d">로트 역추적</text>
+<text x="574" y="188" text-anchor="middle" class="d">필요량 ÷ 라인 여유</text>
+
+<rect x="28" y="246" width="604" height="40" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+<circle cx="56" cy="266" r="5" fill="#22c55e"/><text x="68" y="270" class="k" fill="#cbd5e1">규칙 엔진: 계산·판정·상태 변경</text>
+<circle cx="262" cy="266" r="5" fill="#38bdf8"/><text x="274" y="270" class="k" fill="#cbd5e1">AI: 문장만 (숫자가 다르면 다시 생성)</text>
+<circle cx="490" cy="266" r="5" fill="#f97316"/><text x="502" y="270" class="k" fill="#cbd5e1">사람: 의결·사유·대안 선택</text>
+</svg>
