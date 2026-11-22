@@ -20,6 +20,26 @@
 
 <table>
 <tr>
+<td colspan="2" valign="top">
+
+### 📊 [주행 로그 SQL 후처리와 데이터 품질 검증 · afa-telemetry-sql](https://github.com/tkddn647-ship-it/afa-telemetry-sql)
+<sub>Data Engineering · SQL · Data Quality · 개인 프로젝트 (코드는 Claude Code로 작성)</sub>
+
+<img src="./assets/telemetry.svg" alt="주행 로그 → 형식 판별 → SQLite → 품질 검사(세 구현 대조) → 보고서, AI 분석은 SQL 재실행으로 검증"/>
+
+경주차 DAQ로 모은 실주행 로그 **10세션 · 198,027행**을 SQLite로 옮겨 **품질 검사 → 원인 추적 → 자동 보고서**까지 이어지는 파이프라인. AI가 짠 SQL과 분석을 채점·재계산하는 장치도 함께.
+
+- 결함 주입 시험으로 품질 규칙의 빈틈 발견 → 5행 중앙값 규칙으로 두 행 연속 튄 값 **0% → 99.5%**, 실제 로그 깨진 행 **88 → 610행**
+- 같은 규칙을 **SQL · pandas · 실시간** 세 가지로 구현해 **1,319칸 일치** 대조, 처음 보는 로그 형식은 열 대응 표 한 장으로 적재
+- 깨진 행과 빠진 샘플이 **0.106 비율**로 함께 움직임(10세션 상관 0.999) → 펌웨어 수정 효과를 세션 하나로 판정
+- 규정 점검 SQL로 찾은 '프리차지 미달 6/6' → 펌웨어 대조로 **위반이 아니라 신호 정의 결함**임을 밝힘
+- AI SQL 정답률 **8~10/17 → 16/17** (정답 셋 25문항, 3번 실행 범위로 보고), 분석 에이전트 주장은 SQL 재실행으로 확인
+
+`SQL (SQLite)` `Python` `pandas` `GitHub Actions` `MCP` `Claude Code` · [설명 노트](https://github.com/tkddn647-ship-it/afa-telemetry-sql/blob/main/docs/explain.md)
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 ### 🏎️ [지도 없이 달리는 레이싱카 강화학습](https://github.com/tkddn647-ship-it/2027_F1tenth_test)
@@ -91,6 +111,7 @@
 - **2인이 센서·통신·서버·분석 화면까지** 전 영역 설계·구축
 
 `C` `STM32` `CAN` `Raspberry Pi` `FastAPI`
+<br/>이 데이터의 SQL 분석: [afa-telemetry-sql](https://github.com/tkddn647-ship-it/afa-telemetry-sql)
 
 </td>
 </tr>
@@ -191,12 +212,13 @@
 
 | 분야 | 사용 기술 |
 |---|---|
+| 🗄️ 데이터 엔지니어링 | SQL (SQLite: 창 함수 · CTE · gaps-and-islands), 데이터 품질 검사 · 결함 주입 시험, 증분 적재 · 로그 형식 대응, pandas, GitHub Actions CI, MCP 서버 |
 | 🤖 로보틱스·자율주행 | ROS2 Humble, Cartographer, Stanley / Pure Pursuit, Follow-the-Gap, NVIDIA Jetson |
 | 🧠 강화학습·AI | PyTorch, Stable-Baselines3 (SAC · PPO), Gymnasium, TorchScript / ONNX |
 | 🔌 임베디드·하드웨어 | STM32 HAL · DMA, CAN, UART · SPI · I2C · ADC, ESP32, VESC, Raspberry Pi 5, KiCad |
 | 🛠️ 기계 설계·해석 | SolidWorks, 3D 프린팅, Ansys CFX · Mechanical · System Coupling, OpenRocket, Genesis AI, MATLAB |
 | 🧩 LLM 업무 자동화 | Claude Code, Cursor CLI, GitHub Actions, Gemini API, 출처 검사·테스트 자동 실행 |
-| 🌐 데이터·서버 | Flask, FastAPI, UDP/TCP, AWS, NetworkX, GIS(ITS 표준노드링크, Leaflet) |
+| 🌐 서버·GIS | Flask, FastAPI, UDP/TCP, AWS, NetworkX, GIS(ITS 표준노드링크, Leaflet) |
 
 <br/>
 

@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="312" viewBox="0 0 660 312" role="img" aria-label="afa-telemetry-sql 흐름: 주행 로그를 형식 판별해 SQLite에 넣고, 품질 검사를 세 구현으로 대조한 뒤 보고서와 변화 판정을 만든다. AI가 짠 SQL과 분석은 다시 실행해 검증한다">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1020"/><stop offset="1" stop-color="#1b1230"/></linearGradient>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f97316"/></marker>
+<marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#38bdf8"/></marker>
+<style>.h{font:700 19px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.s{font:500 12.5px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#94a3b8}.b{font:700 15px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#f8fafc}.d{font:500 11px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#cbd5e1}.f{font:600 12px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif;fill:#38bdf8}.flow{stroke:#f97316;stroke-width:2;stroke-dasharray:5 5;animation:m 1.2s linear infinite}.back{stroke:#38bdf8;stroke-width:1.6;stroke-dasharray:4 4;fill:none}@keyframes m{to{stroke-dashoffset:-20}}@media (prefers-reduced-motion:reduce){.flow{animation:none}}</style></defs>
+<rect width="660" height="312" rx="14" fill="url(#bg)"/>
+<text x="28" y="42" class="h">afa-telemetry-sql · 주행 로그 후처리</text><text x="28" y="64" class="s">SQLite · 품질 검사 · AI 분석 검증 · 개인 프로젝트</text>
+
+<rect x="28" y="92" width="136" height="118" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="96" y="124" text-anchor="middle" class="b">주행 로그</text>
+<text x="96" y="152" text-anchor="middle" class="d">CSV 20만 행</text>
+<text x="96" y="172" text-anchor="middle" class="d">머리줄로 형식 판별</text>
+<text x="96" y="192" text-anchor="middle" class="d">같은 파일은 건너뜀</text>
+<line x1="166" y1="151" x2="181" y2="151" class="flow" marker-end="url(#ar)"/>
+
+<rect x="183" y="92" width="136" height="118" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="251" y="124" text-anchor="middle" class="b">SQLite</text>
+<text x="251" y="152" text-anchor="middle" class="d">기준은 코드 밖 표로</text>
+<text x="251" y="172" text-anchor="middle" class="d">깨진 행 뺀 뷰</text>
+<text x="251" y="192" text-anchor="middle" class="d">새 세션만 다시 계산</text>
+<line x1="321" y1="151" x2="336" y2="151" class="flow" marker-end="url(#ar)"/>
+
+<rect x="338" y="92" width="136" height="118" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="406" y="124" text-anchor="middle" class="b">품질 검사</text>
+<text x="406" y="152" text-anchor="middle" class="d">5행 중앙값·창 함수</text>
+<text x="406" y="172" text-anchor="middle" class="d">SQL·pandas·실시간</text>
+<text x="406" y="192" text-anchor="middle" class="d">세 구현 대조</text>
+<line x1="476" y1="151" x2="491" y2="151" class="flow" marker-end="url(#ar)"/>
+
+<rect x="493" y="92" width="139" height="118" rx="10" fill="#141c33" stroke="#334155" stroke-width="1.4"/>
+<text x="562" y="124" text-anchor="middle" class="b">보고서</text>
+<text x="562" y="152" text-anchor="middle" class="d">세션별 경고</text>
+<text x="562" y="172" text-anchor="middle" class="d">이전 세션과 변화 판정</text>
+<text x="562" y="192" text-anchor="middle" class="d">요구사항 추적표</text>
+
+<rect x="183" y="238" width="291" height="50" rx="10" fill="#10233a" stroke="#38bdf8" stroke-width="1.2"/>
+<text x="328" y="259" text-anchor="middle" class="b" style="font-size:14px">AI 분석 (SQL 생성 · 에이전트)</text>
+<text x="328" y="278" text-anchor="middle" class="d">읽기 전용 · 주장마다 SQL을 다시 실행해 확인</text>
+<path d="M251 212 L251 236" class="back" marker-end="url(#ab)"/>
+<path d="M476 263 L562 263 L562 214" class="back" marker-end="url(#ab)"/>
+<text x="572" y="246" class="f">재실행 검증</text>
+</svg>
