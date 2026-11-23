@@ -43,7 +43,7 @@
 <td colspan="2" valign="top">
 
 ### 🧴 [품질 이슈·회수·재공급 운영 시스템 · AX인재전쟁](https://github.com/tkddn647-ship-it/w03-quality-recall)
-<sub>AX인재전쟁 온라인 1회차 삼일PwC 과제 · 개인 참가 · 🏆 참가자 2,916명 중 상위 10% ([인증서](./assets/w03_top10.jpg)) · 업무 규칙·판단 기준 설계와 검증 (코드는 Claude Code로 작성)</sub>
+<sub>AX인재전쟁 온라인 1회차 삼일PwC 과제 · 개인 참가 · 🏆 참가자 2,916명 중 상위 10% ([상위 10% 인증](./assets/w03_top10.jpg) · [참가 인증서](https://axacademy.ai/axwar/cert/osuC8ynzaby4NMCG7BqfBLk_)) · 업무 규칙·판단 기준 설계와 검증 (코드는 Claude Code로 작성)</sub>
 
 <img src="./assets/w03.svg" alt="클레임 접수 → 판정 → 상신 → 의결 → 실행·재공급, 규칙 엔진·AI·사람의 역할 구분"/>
 
