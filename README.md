@@ -3,7 +3,8 @@
 </p>
 
 <p align="center">
-  <b>아주대학교 기계공학과 / 학사</b> ·
+  <b>아주대학교 기계공학과 / 학사</b> · 2027.08 졸업예정<br/>
+  <b>2026.12.22부터 근무 가능</b> · 2027-1학기 취업계 가능
 </p>
 
 <p align="center">
@@ -22,6 +23,25 @@
 <tr>
 <td colspan="2" valign="top">
 
+### 🏟️ [공공 스포츠강좌 찾기 · 공공데이터 건강검진](https://github.com/tkddn647-ship-it/kspo-opendata-check)
+<sub>2026 한국체육산업개발 공공데이터 활용 경진대회 출품 · 개인 · 기획·데이터 수집·결과 검증 (코드는 Claude Code로 작성)</sub>
+
+<img src="https://raw.githubusercontent.com/tkddn647-ship-it/kspo-opendata-check/main/docs/img/find_top.png" width="70%" alt="강좌 찾기 화면"/>
+
+센터 4곳의 형식이 다른 강좌 파일을 한 형식으로 모으고, 기관이 개방한 데이터의 품질을 같은 규칙으로 점검하는 시민·기관용 화면. [페이지 보기](https://tkddn647-ship-it.github.io/kspo-opendata-check/)
+
+- 개방 데이터 **58종**(파일 30 · API 28) 규칙 점검: 점검 필요 2 · 주의 14 · 양호 42, 데이터마다 고치는 방법 제시 (판정에 AI 미사용)
+- 운영 중 강좌 **2,303개**를 요일·시작 시각·대상으로 검색, 1년 넘게 바뀌지 않은 강좌는 '운영 여부 센터 확인' 표시
+- **수집 자동화**: 매주 월요일 포털 수정일 확인 후 바뀐 파일만 갱신·배포, 내려받기 제한 시 갱신 중단·기존 자료 유지, 실시간 주차 API 30분 간격 기록
+- 무작위 강좌 **100개 직접 대조**: 대상이 적힌 75개 모두 일치, 처방 연결 45개 오류 0, 대상이 빈 25개는 화면에 '가정' 표시
+
+`Python` `SQLite` `GitHub Actions` `공공데이터 API` `Claude Code`
+
+</td>
+</tr>
+<tr>
+<td colspan="2" valign="top">
+
 ### 📊 [주행 로그 SQL 후처리와 데이터 품질 검증 · afa-telemetry-sql](https://github.com/tkddn647-ship-it/afa-telemetry-sql)
 <sub>Data Engineering · SQL · Data Quality · 개인 프로젝트 (코드는 Claude Code로 작성)</sub>
 
@@ -36,6 +56,45 @@
 - AI SQL 정답률 **8~10/17 → 16/17** (정답 셋 25문항, 3번 실행 범위로 보고), 분석 에이전트 주장은 SQL 재실행으로 확인
 
 `SQL (SQLite)` `Python` `pandas` `GitHub Actions` `MCP` `Claude Code` · [설명 노트](https://github.com/tkddn647-ship-it/afa-telemetry-sql/blob/main/docs/explain.md)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🤖 [AI Office · AI 에이전트 개발 자동화](https://github.com/tkddn647-ship-it/ai-office)
+<sub>LLM Automation · GitHub Actions · 개인 프로젝트</sub>
+
+<img src="./assets/ai_office.svg" alt="AI Office 흐름: 이슈 → 계획 → 구현 → 검토 → PR"/>
+
+이슈에 라벨 하나만 달면 **계획 → 구현 → 검토 → PR**까지 AI가 역할을 나눠 처리하는 개발 자동화. 기획·운영은 직접, 코드는 Claude Code·Cursor로 작성.
+
+- 계획·검토 AI는 **읽기 전용**, 구현 AI만 코드 수정
+- **자동 병합 없음**: 사람이 PR을 보고 병합
+- 테스트를 직접 실행해 결과를 PR에 첨부, 리뷰에서 문제가 나오면 자동 수정 라운드
+- 실제 레포 2곳에서 **PR 24개 생성 · 24개 병합** (2026.10.27 기준)
+- 출처 검사 규칙: 없는 쪽을 출처로 쓰면 CI 실패 → AI가 원자료 밖 내용으로 만든 결과 **1건 적발**
+
+`Python` `GitHub Actions` `Claude Code` `Cursor` `YAML`
+
+</td>
+<td width="50%" valign="top">
+
+### ⚡ [AFA2026 차량 계측 시스템](https://github.com/tkddn647-ship-it/afa2026)
+<sub>Formula Student · Embedded · Hardware · Server</sub>
+
+<img src="https://raw.githubusercontent.com/tkddn647-ship-it/afa2026/main/afa2026_system_layout.png" alt="AFA2026 배치도"/>
+
+전기차의 서스펜션·가속도·인버터/BMS·조향 데이터를 **STM32에서 한 타임라인으로 100 Hz 동기 수집**하고 실시간 대시보드·로깅·카메라 녹화까지 연결한 자작 데이터로거.
+
+- 링 버퍼 + DMA 전송으로 수집 주기 **10 Hz → 100 Hz**
+- 섀시 다이나모로 검증: 최고속도 계측 90 vs 87 km/h (**오차 약 3.4%**)
+- 주행 영상과 로깅 데이터를 시간 동기화한 분석 화면
+- **2인이 센서·통신·서버·분석 화면까지** 전 영역 설계·구축
+- 주행 로그 25세션 · 약 178만 행을 온보드 영상 15개로 검증 → 0.2초마다 반복되던 **주기적 누락 5%** 원인을 서버 저장 필터에서 찾아 수정 (재현 시험 5.0% → 0, 실차 검증 전) · [분석 문서](https://github.com/tkddn647-ship-it/afa2026/tree/main/analysis)
+
+`C` `STM32` `CAN` `Raspberry Pi` `FastAPI`
+<br/>이 데이터의 SQL 분석: [afa-telemetry-sql](https://github.com/tkddn647-ship-it/afa-telemetry-sql)
 
 </td>
 </tr>
@@ -78,26 +137,6 @@
 </td>
 <td width="50%" valign="top">
 
-### 🤖 [AI Office · AI 에이전트 개발 자동화](https://github.com/tkddn647-ship-it/ai-office)
-<sub>LLM Automation · GitHub Actions · 개인 프로젝트</sub>
-
-<img src="./assets/ai_office.svg" alt="AI Office 흐름: 이슈 → 계획 → 구현 → 검토 → PR"/>
-
-이슈에 라벨 하나만 달면 **계획 → 구현 → 검토 → PR**까지 AI가 역할을 나눠 처리하는 개발 자동화. 기획·운영은 직접, 코드는 Claude Code·Cursor로 작성.
-
-- 계획·검토 AI는 **읽기 전용**, 구현 AI만 코드 수정
-- **자동 병합 없음**: 사람이 PR을 보고 병합
-- 테스트를 직접 실행해 결과를 PR에 첨부, 리뷰에서 문제가 나오면 자동 수정 라운드
-- 실제 레포 2곳에서 **PR 24개 생성 · 24개 병합** (2026.10.27 기준)
-- 출처 검사 규칙: 없는 쪽을 출처로 쓰면 CI 실패 → AI가 원자료 밖 내용으로 만든 결과 **1건 적발**
-
-`Python` `GitHub Actions` `Claude Code` `Cursor` `YAML`
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
 ### 🏁 [ROBORACER 실차 주행 스택](https://github.com/tkddn647-ship-it/f1tenth_ajou)
 <sub>Robotics · ROS2 · 팀 프로젝트</sub>
 
@@ -113,24 +152,6 @@
 
 `ROS2` `C++` `Python` `Cartographer` `Jetson`
 <br/>관련: [jetson_code](https://github.com/tkddn647-ship-it/jetson_code)
-
-</td>
-<td width="50%" valign="top">
-
-### ⚡ [AFA2026 차량 계측 시스템](https://github.com/tkddn647-ship-it/afa2026)
-<sub>Formula Student · Embedded · Hardware · Server</sub>
-
-<img src="https://raw.githubusercontent.com/tkddn647-ship-it/afa2026/main/afa2026_system_layout.png" alt="AFA2026 배치도"/>
-
-전기차의 서스펜션·가속도·인버터/BMS·조향 데이터를 **STM32에서 한 타임라인으로 100 Hz 동기 수집**하고 실시간 대시보드·로깅·카메라 녹화까지 연결한 자작 데이터로거.
-
-- 링 버퍼 + DMA 전송으로 수집 주기 **10 Hz → 100 Hz**
-- 섀시 다이나모로 검증: 최고속도 계측 90 vs 87 km/h (**오차 약 3.4%**)
-- 주행 영상과 로깅 데이터를 시간 동기화한 분석 화면
-- **2인이 센서·통신·서버·분석 화면까지** 전 영역 설계·구축
-
-`C` `STM32` `CAN` `Raspberry Pi` `FastAPI`
-<br/>이 데이터의 SQL 분석: [afa-telemetry-sql](https://github.com/tkddn647-ship-it/afa-telemetry-sql)
 
 </td>
 </tr>
