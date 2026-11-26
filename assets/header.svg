@@ -1,30 +1,27 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="권상우 · Sangwoo Kwon — Robotics · Autonomous Racing · Embedded">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="권상우 · Sangwoo Kwon — Data Quality · Measurement · Validation">
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0b1020"/>
       <stop offset="0.55" stop-color="#121a33"/>
       <stop offset="1" stop-color="#1b1230"/>
     </linearGradient>
-    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#f97316"/>
-      <stop offset="1" stop-color="#facc15"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="0.82" cy="0.5" r="0.45">
-      <stop offset="0" stop-color="#f97316" stop-opacity="0.22"/>
+    <radialGradient id="glow" cx="0.78" cy="0.5" r="0.45">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0.18"/>
       <stop offset="1" stop-color="#f97316" stop-opacity="0"/>
     </radialGradient>
+    <clipPath id="plot"><rect x="700" y="46" width="450" height="210" rx="10"/></clipPath>
     <style>
       .t1 { font: 700 46px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif; fill: #f8fafc; }
       .t2 { font: 500 20px 'Pretendard','Apple SD Gothic Neo','Noto Sans KR','Segoe UI',sans-serif; fill: #cbd5e1; }
       .t3 { font: 600 14px 'JetBrains Mono','SFMono-Regular',Consolas,monospace; fill: #f97316; letter-spacing: 3px; }
       .tag { font: 600 13px 'Segoe UI','Noto Sans KR',sans-serif; fill: #e2e8f0; }
-      .track { fill: none; stroke: url(#line); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 8 10; animation: run 6s linear infinite; }
-      .trackbase { fill: none; stroke: #334155; stroke-width: 14; stroke-linecap: round; stroke-linejoin: round; }
-      .beam { stroke: #38bdf8; stroke-width: 1; opacity: 0.55; animation: pulse 2.4s ease-in-out infinite; }
-      @keyframes run { to { stroke-dashoffset: -180; } }
-      @keyframes pulse { 0%,100% { opacity: 0.15; } 50% { opacity: 0.7; } }
-      .car { animation: drive 6s linear infinite; offset-path: path('M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z'); }
-      @keyframes drive { from { offset-distance: 0%; } to { offset-distance: 100%; } }
+      .lbl { font: 500 11px 'JetBrains Mono','SFMono-Regular',Consolas,monospace; fill: #94a3b8; }
+      .band { fill: #64748b; fill-opacity: 0.22; stroke: #64748b; stroke-opacity: 0.5; stroke-width: 1; }
+      .meas { fill: none; stroke: #f97316; stroke-width: 2; stroke-linejoin: round; }
+      .flag { fill: none; stroke: #f87171; stroke-width: 1.5; animation: pulse 2.4s ease-in-out infinite; }
+      .scan { stroke: #38bdf8; stroke-width: 1.5; opacity: 0.6; animation: sweep 6s linear infinite; }
+      @keyframes pulse { 0%,100% { opacity: 0.25; } 50% { opacity: 1; } }
+      @keyframes sweep { from { transform: translateX(0); } to { transform: translateX(430px); } }
     </style>
   </defs>
 
@@ -37,34 +34,38 @@
     <path d="M100 0V300M200 0V300M300 0V300M400 0V300M500 0V300M600 0V300M700 0V300M800 0V300M900 0V300M1000 0V300M1100 0V300"/>
   </g>
 
-  <!-- track -->
-  <path class="trackbase" d="M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z"/>
-  <path class="track" d="M760 90 C 860 40, 1060 40, 1110 110 S 1080 240, 960 230 S 800 260, 760 200 S 700 120, 760 90 Z"/>
-
-  <!-- car with lidar beams -->
-  <g class="car">
-    <g class="beam">
-      <line x1="0" y1="0" x2="60" y2="-38"/><line x1="0" y1="0" x2="70" y2="-12"/>
-      <line x1="0" y1="0" x2="70" y2="12"/><line x1="0" y1="0" x2="60" y2="38"/>
-      <line x1="0" y1="0" x2="34" y2="-58"/><line x1="0" y1="0" x2="34" y2="58"/>
-    </g>
-    <rect x="-11" y="-6" width="22" height="12" rx="3" fill="#f97316"/>
-    <circle cx="4" cy="0" r="2.6" fill="#0b1020"/>
+  <!-- measured vs reference, flagged samples -->
+  <rect x="700" y="46" width="450" height="210" rx="10" fill="#0b1020" fill-opacity="0.55" stroke="#334155"/>
+  <g clip-path="url(#plot)">
+    <path class="band" d="M720.0 121.3 L725.0 114.6 L730.0 109.0 L735.0 104.9 L740.0 102.2 L745.0 100.9 L750.0 100.8 L755.0 101.7 L760.0 103.1 L765.0 104.6 L770.0 106.0 L775.0 106.9 L780.0 107.1 L785.0 106.6 L790.0 105.3 L795.0 103.4 L800.0 101.2 L805.0 99.2 L810.0 97.6 L815.0 96.8 L820.0 97.2 L825.0 99.1 L830.0 102.4 L835.0 107.3 L840.0 113.5 L845.0 120.8 L850.0 128.7 L855.0 136.7 L860.0 144.5 L865.0 151.5 L870.0 157.4 L875.0 161.8 L880.0 164.6 L885.0 165.8 L890.0 165.5 L895.0 164.0 L900.0 161.6 L905.0 158.6 L910.0 155.7 L915.0 152.9 L920.0 150.8 L925.0 149.4 L930.0 148.8 L935.0 148.9 L940.0 149.5 L945.0 150.4 L950.0 151.2 L955.0 151.4 L960.0 150.9 L965.0 149.1 L970.0 146.1 L975.0 141.7 L980.0 136.1 L985.0 129.4 L990.0 122.0 L995.0 114.2 L1000.0 106.7 L1005.0 99.9 L1010.0 94.1 L1015.0 89.8 L1020.0 87.1 L1025.0 86.2 L1030.0 87.0 L1035.0 89.2 L1040.0 92.6 L1045.0 96.7 L1050.0 101.2 L1055.0 105.7 L1060.0 109.7 L1065.0 112.9 L1070.0 115.4 L1075.0 116.9 L1080.0 117.7 L1085.0 117.9 L1090.0 117.9 L1095.0 118.0 L1100.0 118.5 L1105.0 119.8 L1110.0 122.2 L1115.0 125.8 L1120.0 130.5 L1125.0 136.2 L1130.0 142.6 L1130.0 164.6 L1125.0 158.2 L1120.0 152.5 L1115.0 147.8 L1110.0 144.2 L1105.0 141.8 L1100.0 140.5 L1095.0 140.0 L1090.0 139.9 L1085.0 139.9 L1080.0 139.7 L1075.0 138.9 L1070.0 137.4 L1065.0 134.9 L1060.0 131.7 L1055.0 127.7 L1050.0 123.2 L1045.0 118.7 L1040.0 114.6 L1035.0 111.2 L1030.0 109.0 L1025.0 108.2 L1020.0 109.1 L1015.0 111.8 L1010.0 116.1 L1005.0 121.9 L1000.0 128.7 L995.0 136.2 L990.0 144.0 L985.0 151.4 L980.0 158.1 L975.0 163.7 L970.0 168.1 L965.0 171.1 L960.0 172.9 L955.0 173.4 L950.0 173.2 L945.0 172.4 L940.0 171.5 L935.0 170.9 L930.0 170.8 L925.0 171.4 L920.0 172.8 L915.0 174.9 L910.0 177.7 L905.0 180.6 L900.0 183.6 L895.0 186.0 L890.0 187.5 L885.0 187.8 L880.0 186.6 L875.0 183.8 L870.0 179.4 L865.0 173.5 L860.0 166.5 L855.0 158.7 L850.0 150.7 L845.0 142.8 L840.0 135.5 L835.0 129.3 L830.0 124.4 L825.0 121.1 L820.0 119.2 L815.0 118.8 L810.0 119.6 L805.0 121.2 L800.0 123.2 L795.0 125.4 L790.0 127.3 L785.0 128.6 L780.0 129.1 L775.0 128.9 L770.0 128.0 L765.0 126.6 L760.0 125.1 L755.0 123.7 L750.0 122.8 L745.0 122.9 L740.0 124.2 L735.0 126.9 L730.0 131.0 L725.0 136.6 L720.0 143.3 Z"/>
+    <path class="meas" d="M720.0 131.7 L725.0 126.8 L730.0 119.5 L735.0 115.1 L740.0 110.9 L745.0 111.4 L750.0 114.5 L755.0 113.7 L760.0 116.6 L765.0 116.2 L770.0 118.0 L775.0 118.4 L780.0 114.1 L785.0 119.6 L790.0 117.5 L795.0 115.6 L800.0 108.2 L805.0 106.0 L810.0 106.4 L815.0 63.8 L820.0 109.0 L825.0 110.0 L830.0 114.7 L835.0 116.8 L840.0 125.3 L845.0 132.7 L850.0 138.1 L855.0 151.9 L860.0 156.9 L865.0 165.4 L870.0 166.9 L875.0 171.0 L880.0 174.8 L885.0 176.5 L890.0 178.0 L895.0 175.6 L900.0 171.5 L905.0 167.4 L910.0 165.4 L915.0 166.9 L920.0 159.8 L925.0 161.0 L930.0 160.8 L935.0 156.3 L940.0 160.6 L945.0 164.5 L950.0 157.3 L955.0 206.4 L960.0 161.6 L965.0 158.2 L970.0 158.3 L975.0 152.6 L980.0 143.6 L985.0 142.4 L990.0 134.6 L995.0 127.5 L1000.0 121.2 L1005.0 111.8 L1010.0 105.4 L1015.0 97.7 L1020.0 99.6 L1025.0 95.7 L1030.0 96.9 L1035.0 97.1 L1040.0 101.2 L1045.0 106.4 L1050.0 68.2 L1055.0 111.8 L1060.0 117.2 L1065.0 124.5 L1070.0 129.8 L1075.0 129.3 L1080.0 124.1 L1085.0 122.9 L1090.0 129.7 L1095.0 127.2 L1100.0 126.8 L1105.0 133.2 L1110.0 135.9 L1115.0 137.1 L1120.0 142.0 L1125.0 148.2 L1130.0 157.5"/>
+    <circle class="flag" cx="815.0" cy="63.8" r="7"/><circle cx="815.0" cy="63.8" r="2.6" fill="#f87171"/>
+    <circle class="flag" cx="955.0" cy="206.4" r="7"/><circle cx="955.0" cy="206.4" r="2.6" fill="#f87171"/>
+    <circle class="flag" cx="1050.0" cy="68.2" r="7"/><circle cx="1050.0" cy="68.2" r="2.6" fill="#f87171"/>
+    <line class="scan" x1="712" y1="56" x2="712" y2="222"/>
+  </g>
+  <g transform="translate(720,240)">
+    <line x1="0" y1="-4" x2="18" y2="-4" stroke="#f97316" stroke-width="2"/>
+    <text x="24" y="0" class="lbl">measured</text>
+    <rect x="104" y="-9" width="18" height="10" rx="2" fill="#64748b" fill-opacity="0.35" stroke="#64748b" stroke-opacity="0.6"/>
+    <text x="128" y="0" class="lbl">expected range</text>
+    <circle cx="246" cy="-4" r="5" fill="none" stroke="#f87171" stroke-width="1.5"/>
+    <text x="256" y="0" class="lbl">flagged 3</text>
   </g>
 
   <!-- text -->
-  <text x="64" y="92" class="t3">ROBOTICS · AUTONOMOUS RACING · EMBEDDED</text>
+  <text x="64" y="92" class="t3">DATA QUALITY · MEASUREMENT · VALIDATION</text>
   <text x="64" y="152" class="t1">권상우 <tspan fill="#94a3b8" font-weight="500">· Sangwoo Kwon</tspan></text>
-  <text x="64" y="192" class="t2">시뮬레이션에서 끝내지 않고, 실제 하드웨어에 올립니다.</text>
+  <text x="64" y="192" class="t2">숫자를 쓰기 전에, 그 숫자가 맞는지 먼저 확인합니다.</text>
 
   <g transform="translate(64,224)">
-    <rect x="0" width="186" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
-    <text x="93" y="20" text-anchor="middle" class="tag">Reinforcement Learning</text>
-    <rect x="196" width="124" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
-    <text x="258" y="20" text-anchor="middle" class="tag">ROS2 · Jetson</text>
-    <rect x="330" width="118" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
-    <text x="389" y="20" text-anchor="middle" class="tag">STM32 · CAN</text>
-    <rect x="458" width="140" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
-    <text x="528" y="20" text-anchor="middle" class="tag">Mechanical Eng.</text>
+    <rect x="0" width="150" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="75" y="20" text-anchor="middle" class="tag">Data Quality · SQL</text>
+    <rect x="160" width="152" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="236" y="20" text-anchor="middle" class="tag">Vehicle DAQ · CAN</text>
+    <rect x="322" width="156" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="400" y="20" text-anchor="middle" class="tag">Python · Automation</text>
+    <rect x="488" width="140" height="30" rx="15" fill="#1e293b" stroke="#334155"/>
+    <text x="558" y="20" text-anchor="middle" class="tag">Mechanical Eng.</text>
   </g>
 </svg>
