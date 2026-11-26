@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/header.svg" width="100%" alt="권상우 · Sangwoo Kwon"/>
+  <img src="./assets/header_v2.svg" width="100%" alt="권상우 · Sangwoo Kwon"/>
 </p>
 
 <p align="center">
